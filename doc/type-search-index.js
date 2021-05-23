@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.example.semestralkaandroid","l":"Hra"},{"p":"com.example.semestralkaandroid","l":"KoniecHry"},{"p":"com.example.semestralkaandroid","l":"MainActivity"},{"p":"com.example.semestralkaandroid","l":"Manazer"}];updateSearchResults();
