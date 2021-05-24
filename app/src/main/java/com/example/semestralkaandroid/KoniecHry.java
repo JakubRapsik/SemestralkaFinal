@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -16,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 1.0
  */
 public class KoniecHry extends AppCompatActivity {
+
+    private int skore;
 
     /**
      * Hlavna metoda triedy ktora zadefinuje vsetky udaje.
@@ -27,7 +28,7 @@ public class KoniecHry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.konice_hry);
         int vysledok = this.getIntent().getIntExtra("Vysledok", 3);
-        int skore = this.getIntent().getIntExtra("Vysledne skore: ", 0);
+        skore = this.getIntent().getIntExtra("Vysledne skore: ", 0);
         Button button = this.findViewById(R.id.VysledokBtn);
         TextView textView = this.findViewById(R.id.VysledokTxt);
         TextView Skore = this.findViewById(R.id.FinalSkore);
@@ -52,6 +53,7 @@ public class KoniecHry extends AppCompatActivity {
      */
     public void znova(View view) {
         Intent intent = new Intent(KoniecHry.this, MainActivity.class);
+        intent.putExtra("Vysledne skore: ", skore);
         startActivity(intent);
         finish();
     }
